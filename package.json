@@ -1,0 +1,32 @@
+{
+  "name": "overwatcher",
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "version": "0.1.0",
+  "description": "A web app to allow you to quickly search for others around your skill rating to build a not so random team",
+  "main": "server.js",
+  "author": "code-rocket",
+  "maintainers": [
+    {
+      "email": "zach@stoltz.io",
+      "name": "Zach Stoltz",
+      "url": "http://www.stoltz.io"
+    }
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.12.2",
+    "jest": "^18.0.0",
+    "node-sass": "^4.0.0"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "helmet": "^3.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "next"
+  }
+}
