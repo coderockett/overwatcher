@@ -6,7 +6,10 @@
   "version": "0.1.0",
   "description": "A web app to allow you to quickly search for others around your skill rating to build a not so random team",
   "main": "server.js",
-  "author": "code-rocket",
+  "author": "coderockett",
+  "repository": {
+    "url": "https://github.com/coderockett/overwatcher"
+  },
   "maintainers": [
     {
       "email": "zach@stoltz.io",
@@ -14,19 +17,40 @@
       "url": "http://www.stoltz.io"
     }
   ],
+  "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "pretest": "eslint *",
+    "start": "nodemon server.js"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "license": "UNLICENSED",
   "devDependencies": {
     "babel-eslint": "^7.1.1",
+    "codecov": "^1.0.1",
     "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
     "jest": "^18.0.0",
-    "node-sass": "^4.0.0"
+    "node-sass": "^4.0.0",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "helmet": "^3.1.0",
+    "path": "^0.12.7",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "next"
+    "react-router": "next",
+    "serve-static": "^1.11.1",
+    "winston": "^2.3.0"
   }
 }
