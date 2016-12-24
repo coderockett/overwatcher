@@ -6,8 +6,8 @@ describe('owService Test Suite', () => {
   describe('getUserBlob', () => {
     test('getUserBlob returns 404 from api service when battletag not found', () => {
       const rtnObj = { error: '404' };
-      nock(`https://${config.owHost}/${config.owBasePath}/Zeekzz-1534/blob`)
-        .get('') // TODO: Check with nock team to see why this works, but putting the path in doesn't
+      nock(`https://${config.owHost}/${config.owBasePath}`)
+        .get('/Zeekzz-1534/blob')
         .reply(200, rtnObj);
 
       const owService = new OWService();
